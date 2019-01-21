@@ -1,0 +1,15 @@
+{
+    "name": "wuwielk/test",
+    "authors": [
+        {
+            "name": "likai",
+            "email": "likai@shuzilm.cn"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "wuwielk\\ComposerPackageDemo\\": "src/"
+        }
+    },
+    "require": {}
+}
