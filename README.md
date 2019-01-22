@@ -1,22 +1,18 @@
-## Packagetest-For-Laravel
-
-[![license](https://img.shields.io/badge/license-WTFPL%20--%20Do%20What%20the%20Fuck%20You%20Want%20to%20Public%20License-green.svg)](https://raw.githubusercontent.com/ALawating-Rex/packagetest-for-laravel/master/LICENSE)
-
-Just a test for laravel package development
-
-用于 laravel 扩展包的开发学习
+用于返回统一的 code
 
 ## Installation
 
 ```shell
-$ composer require "aex/packagetest-for-laravel:dev-master" -vvv
+$ composer require "shu-m/shu-m-unified-code" -vvv
 ```
 
-## Documentation
+## 注册
 
-- [Blog](http://blog.share345.com/2018/02/05/laravel-package-development.html) 
-- [CSDN](http://blog.csdn.net/m0sh1/article/details/79257935) 
+config -> app.php -> providers 添加 ShuM\Unifiedcode\UnifiedcodeServiceProvider::class
+config -> app.php -> aliases 添加 'Unifiedcode' => ShuM\Unifiedcode\Facades\Unifiedcode::class,
 
-## License
+## 使用
 
-this repo is released under the [WTFPL](http://www.wtfpl.net/) – Do What the Fuck You Want to Public License.
+int $code 返回码
+array $param 需要替换的值  例: array(':type' => 1, ':name' => 'shum')
+Unifiedcode::parsingCode($code, $param)
