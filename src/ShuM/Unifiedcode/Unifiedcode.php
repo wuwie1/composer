@@ -1,8 +1,6 @@
 <?php
-namespace ShuM\Unifiedcode;
 
-use Illuminate\Session\SessionManager;
-use Illuminate\Config\Repository;
+namespace ShuM\Unifiedcode;
 
 class Unifiedcode
 {
@@ -17,23 +15,23 @@ class Unifiedcode
     protected $config;
 
     /**
-     * Packagetest constructor.
-     * @param SessionManager $session
-     * @param Repository $config
+     * Packagetest constructor
      */
     public function __construct()
-    {   
-        // $this->session = $session;
-        // $this->config = $config;
+    {
+        require_once('ConfigCode.php');
     }
 
     /**
-     * @param string $msg
-     * @return string
+     * @param int $code
+     * @param array $param
+     * @return mixed|string
      */
-    public function parsingCode($code = 0){
+    public function parsingCode($code = -1, $param = array())
+    {
         require_once('ConfigCode.php');
-        $res = isset($common[$code]) ? $common[$code] : '未定义异常';
-        return $res;
+        $msg = isset($common[$code]) ? $common[$code] : '未定义异常';
+        $msg = $param ? str_replace(array_keys($param), array_values($param), $msg) : $msg;
+        return $msg;
     }
 }

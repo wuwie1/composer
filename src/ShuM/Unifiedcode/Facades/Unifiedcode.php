@@ -1,4 +1,5 @@
 <?php
+
 namespace ShuM\Unifiedcode\Facades;
 
 use Illuminate\Support\Facades\Facade;

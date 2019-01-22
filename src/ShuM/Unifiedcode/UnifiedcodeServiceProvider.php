@@ -11,6 +11,7 @@ class UnifiedcodeServiceProvider extends ServiceProvider
      * @var bool
      */
     protected $defer = true;
+
     /**
      * Bootstrap the application services.
      *
