@@ -1,5 +1,5 @@
 {
-    "name": "shu-m/shu-m-unified-code",
+    "name": "ShuM/ShuM-unified-code",
     "authors": [
         {
             "name": "shuM",
@@ -9,7 +9,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "ShuM\\Unifiedcode\\": "src/"
+            "ShuM\\Unifiedcode\\": "src/ShuM/Unifiedcode/"
         }
     },
     "extra": {
